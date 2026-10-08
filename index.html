@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Suphakorn Yanprasong Portfolio">
+<meta property="og:description" content="Commercial talent, event crew and film marketing, Bangkok.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suphakorn-yanp.github.io/portfolio/">
+<meta property="og:image" content="https://suphakorn-yanp.github.io/portfolio/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230d0d0c'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<title>Suphakorn Yanprasong Portfolio</title>
+<meta name="description" content="Portfolio of Suphakorn “Return” Yanprasong — commercial talent, event crew and film marketing, Bangkok.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Anuphan:wght@400;500&display=swap">
+<style>
+/* Layout: gallery wall — full-bleed stills on a two-column grid, black hairline rules, outline pill labels, white space as the frame */
+:root{
+  --paper:#ffffff;
+  --ink:#0d0d0c;
+  --mute:#9b9b97;
+  --soft:#e3e3e0;
+  --wash:#f2f2f0;
+  --live:#1d9a48;
+  --veil:rgba(255,255,255,.86);
+  --f-sans:"Geist","Anuphan",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"Geist Mono","Anuphan",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --g:clamp(16px,1.6vw,28px);
+  --t-meta:12px;
+  --t-body:15px;
+  --t-lead:clamp(17px,1.4vw,21px);
+  --t-h3:clamp(22px,1.9vw,30px);
+  --t-h2:clamp(40px,5.6vw,88px);
+  --t-row:clamp(30px,4.6vw,70px);
+  --t-h1:clamp(52px,9.3vw,158px);
+  --ease:cubic-bezier(.2,.7,0,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-sans);font-size:var(--t-body);line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:clip;padding-inline:var(--g)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,dl,dd,figure{margin:0}
+h1,h2,h3{font-weight:400;text-wrap:balance}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.bleed{margin-inline:calc(var(--g) * -1)}
+.mono{font-family:var(--f-mono);font-size:var(--t-meta);letter-spacing:.02em}
+.mute{color:var(--mute)}
+.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ink);border-radius:3px;padding:2px 7px 3px;font-size:11.5px;line-height:1.2;background:var(--paper);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:4px;padding:9px 14px;font:500 13px/1 var(--f-sans);text-decoration:none;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover{background:var(--paper);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.ulink{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:1px;transition:background-size .35s var(--ease)}
+.ulink:hover{background-size:0 1px;background-position:100% 100%}
+
+/* ---------- header ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:40;padding:calc(env(safe-area-inset-top,0px) + 10px) var(--g) 10px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--veil);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.mark{font:500 clamp(16px,1.5vw,20px)/1 var(--f-sans);letter-spacing:-.03em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:4px;background:var(--wash);border-radius:5px;padding:4px}
+.nav a,.nav span,.nav button{font:500 12px/1 var(--f-sans);text-decoration:none;padding:8px 11px;border-radius:3px;border:0;background:none;color:var(--ink);white-space:nowrap}
+.nav a:hover{background:var(--paper)}
+.status{display:inline-flex;align-items:center;gap:7px;margin-right:6px}
+.status i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 var(--live);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(29,154,72,.45)}70%{box-shadow:0 0 0 7px rgba(29,154,72,0)}100%{box-shadow:0 0 0 0 rgba(29,154,72,0)}}
+.nav .menu-btn{display:none;cursor:pointer}
+.menu-panel{position:fixed;z-index:39;top:calc(env(safe-area-inset-top,0px) + 58px);right:var(--g);left:var(--g);background:var(--wash);border-radius:6px;padding:8px;display:grid;gap:2px}
+.menu-panel[hidden]{display:none}
+@media (min-width:761px){.menu-panel{display:none}}
+.menu-panel a{font:400 28px/1.1 var(--f-sans);letter-spacing:-.03em;text-decoration:none;padding:10px 10px}
+.menu-panel .status{font-size:12px;padding:10px;margin:0}
+
+/* ---------- hero ---------- */
+.hero{padding-top:calc(env(safe-area-inset-top,0px) + 92px)}
+.hero h1{font-size:var(--t-h1);line-height:.9;letter-spacing:-.05em}
+.ln{display:inline-block;overflow:clip;padding-bottom:.06em;vertical-align:top}
+.ln>span{display:inline-block}
+.hero-sub{font-size:clamp(30px,5.4vw,92px);line-height:.95;letter-spacing:-.045em;color:var(--mute);margin-top:.12em}
+.hero-meta{margin-top:clamp(28px,4vw,56px);border-top:1px solid var(--ink);padding-top:9px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:8px 24px;font-size:13.5px}
+.hero-meta a{color:var(--mute);text-transform:uppercase;font-size:12px;letter-spacing:.04em;text-decoration:none;transition:color .2s}
+.hero-meta a:hover{color:var(--ink)}
+.hero-fig{position:relative;margin-top:16px}
+.hero-fig .media{overflow:hidden;aspect-ratio:1679/794;max-width:100%;background:var(--wash)}
+.hero-fig img{width:100%;height:100%;object-fit:cover;transform-origin:50% 40%}
+.hero-fig .tag{position:absolute;top:10px;left:10px}
+.cap{display:flex;justify-content:space-between;gap:16px;margin-top:8px;color:var(--mute)}
+
+@media (prefers-reduced-motion:no-preference){
+  .ln>span{animation:rise 1.15s var(--ease) both}
+  .ln+.ln>span{animation-delay:.07s}
+  .hero-sub{animation:fade 1.2s .25s var(--ease) both}
+  .hero-fig .media{animation:wipe 1.5s .15s var(--ease) both}
+}
+@keyframes rise{from{transform:translateY(108%)}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+@keyframes wipe{from{clip-path:inset(100% 0 0 0)}}
+
+/* ---------- strip ---------- */
+.strip{margin-top:clamp(90px,12vw,190px);overflow:clip}
+.strip-track{display:flex;align-items:flex-start;gap:clamp(10px,1.2vw,18px);width:max-content;padding-inline:var(--g)}
+.strip figure{flex:none;width:clamp(120px,14vw,230px);overflow:hidden;background:var(--wash)}
+.strip figure:nth-child(3n+2){margin-top:clamp(40px,6vw,96px)}
+.strip figure:nth-child(4n+3){margin-top:clamp(16px,2.5vw,40px);width:clamp(140px,17vw,280px)}
+.strip figure:nth-child(5n){margin-top:clamp(60px,9vw,140px)}
+.strip img{width:100%;height:auto}
+
+/* ---------- section heads ---------- */
+.sec{padding-top:clamp(110px,13vw,210px)}
+.sec-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end;gap:12px 24px;border-bottom:1px solid var(--ink);padding-bottom:10px}
+.sec-head .tag{justify-self:start;margin-bottom:.5em}
+.sec-head h2{font-size:var(--t-h2);line-height:.95;letter-spacing:-.045em}
+.sec-head h2 .th{display:block;color:var(--mute);font-size:.5em;letter-spacing:-.02em;line-height:1.2;margin-top:.15em}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;margin-top:24px}
+.two>*{min-width:0}
+.aside{max-width:22ch;font-size:var(--t-lead);line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:var(--t-lead);line-height:1.38;letter-spacing:-.012em;max-width:36ch}
+.lead+.lead{margin-top:.9em}
+
+/* ---------- about ---------- */
+.portrait{margin-top:clamp(28px,4vw,56px);width:min(100%,360px);aspect-ratio:1;overflow:hidden;background:var(--wash)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.about .btn{margin-top:22px}
+.facts{margin-top:clamp(32px,4vw,52px);display:grid}
+.facts>div{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:16px;padding:11px 0;border-top:1px solid var(--soft)}
+.facts dt{font-family:var(--f-mono);font-size:var(--t-meta);text-transform:uppercase;letter-spacing:.05em;color:var(--mute);padding-top:2px}
+.facts dd{max-width:44ch}
+.counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(32px,4vw,52px);border-top:1px solid var(--ink);padding-top:12px}
+.counts b{display:block;font:400 clamp(44px,5vw,76px)/.9 var(--f-sans);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.counts span{display:block;margin-top:8px;font-size:13px;color:var(--mute);max-width:18ch}
+
+/* ---------- index ---------- */
+.index-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;padding:.06em 0 .1em;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--mute);transition:color .3s}
+.row .t{font-size:var(--t-row);line-height:1.08;letter-spacing:-.04em;text-align:center;transition:color .3s,transform .5s var(--ease)}
+.row .c,.row .f{font-family:var(--f-mono);font-size:var(--t-meta);letter-spacing:.03em;text-transform:uppercase;color:var(--mute);transition:color .3s}
+.row .f{text-align:right}
+.row:hover .t,.row:focus-visible .t{color:var(--ink)}
+.row:hover .c,.row:hover .f{color:var(--ink)}
+.preview{position:fixed;left:0;top:0;z-index:30;pointer-events:none;width:clamp(200px,17vw,280px);aspect-ratio:4/5}
+.preview div{width:100%;height:100%;transform:translate(-50%,-50%) scale(.6) rotate(-3deg);opacity:0;transition:transform .5s var(--ease),opacity .3s;overflow:hidden;background:var(--wash)}
+.preview.on div{transform:translate(-50%,-50%) scale(1) rotate(0);opacity:1}
+.preview img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- on camera ---------- */
+.cam-pin{padding-top:calc(env(safe-area-inset-top,0px) + 78px)}
+.cam-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap;margin-top:16px}
+.cam-intro p{max-width:46ch}
+.rail{margin-top:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail.pinned{overflow:clip;scroll-snap-type:none}
+.track{position:relative;display:flex;gap:clamp(12px,1.3vw,20px);width:max-content;will-change:transform}
+.card{--cw:clamp(250px,min(25vw,calc((100svh - 420px) * .8)),400px);width:var(--cw);flex:none;scroll-snap-align:start;display:flex;flex-direction:column}
+.card figure{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--wash);cursor:pointer}
+.card figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease),transform 1.2s var(--ease)}
+.card figure .b{opacity:0}
+.card:hover figure .b,.card.flip figure .b{opacity:1}
+.card:hover figure img{transform:scale(1.03)}
+.card figure .tag{position:absolute;top:8px;left:8px;z-index:2}
+.card-meta{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--mute)}
+.card h3{font-size:var(--t-h3);line-height:1.05;letter-spacing:-.03em;margin-top:6px}
+.card h3 span{color:var(--mute)}
+.card p{margin-top:8px;font-size:14px;line-height:1.42;max-width:38ch}
+.card .links{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}
+.rail-foot{display:flex;align-items:center;gap:16px;margin-top:22px}
+.progress{flex:1;height:3px;background:var(--wash);overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(.14)}
+.also{margin-top:14px;color:var(--mute);font-size:13px}
+
+/* ---------- behind the release ---------- */
+.wbd .two{margin-top:0}
+.stick{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);align-self:start;padding-top:24px}
+.org{font-size:var(--t-h3);letter-spacing:-.03em;line-height:1.1}
+.stick .mono{display:block;margin-top:6px;color:var(--mute)}
+.stick .lead{margin-top:20px}
+.proj{padding-top:24px}
+.proj+.proj{margin-top:clamp(56px,7vw,110px);border-top:1px solid var(--soft)}
+.proj h3{font-size:var(--t-h2);line-height:.95;letter-spacing:-.045em}
+.proj h3 .mute{display:block;font-size:.42em;letter-spacing:-.02em;margin-top:.25em}
+.spec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px;border-top:1px solid var(--ink);padding-top:10px}
+.spec dt{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.spec dd{margin-top:3px;font-size:14px}
+.proj p{margin-top:18px;max-width:52ch;font-size:15.5px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1vw,14px);margin-top:22px}
+.pair figure{aspect-ratio:3/4;max-width:100%;overflow:hidden;background:var(--wash)}
+.pair img,.wide img{width:100%;height:100%;object-fit:cover}
+.wide{margin-top:clamp(8px,1vw,14px);aspect-ratio:16/9;max-width:100%;overflow:hidden;background:var(--wash)}
+.fig-cap{margin-top:8px;color:var(--mute)}
+
+/* ---------- film ---------- */
+.film-img{margin-top:16px;height:clamp(260px,62vw,88svh);overflow:hidden;background:var(--ink)}
+.film-img img{width:100%;height:118%;object-fit:cover;transform:translateY(-8%)}
+.credit{display:grid;place-content:center;text-align:center;gap:6px;padding:clamp(36px,6vw,90px) 0;border-bottom:1px solid var(--soft)}
+.credit .mono{text-transform:uppercase;letter-spacing:.24em;color:var(--mute)}
+.credit strong{font:400 clamp(26px,3vw,46px)/1 var(--f-sans);letter-spacing:-.035em}
+.film .two{margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;list-style:none;padding:0}
+.chips li{border:1px solid var(--soft);border-radius:999px;padding:5px 11px;font-size:13px}
+.trailer{margin-top:24px;max-width:460px}
+.trailer div{aspect-ratio:776/478;max-width:100%;overflow:hidden;background:var(--ink)}
+.trailer img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- floor ---------- */
+.floor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1vw,14px);margin-top:24px}
+.floor-grid figure{aspect-ratio:3/4;max-width:100%;overflow:hidden;background:var(--wash)}
+.floor-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.floor-grid figure:hover img{transform:scale(1.04)}
+.gig{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:18px}
+.gig>div{min-width:0;border-top:1px solid var(--ink);padding-top:10px}
+.gig .g2{grid-column:span 2}
+.gig h3{font-size:var(--t-h3);letter-spacing:-.03em;line-height:1.08}
+.gig .mono{display:block;margin-top:4px;color:var(--mute)}
+.gig p{margin-top:12px;max-width:52ch}
+
+/* ---------- contact ring ---------- */
+.contact{margin-top:clamp(110px,13vw,210px);background:var(--wash);padding:clamp(80px,10vw,150px) var(--g) 0;overflow:clip;text-align:center}
+.contact h2{font-size:clamp(46px,7.4vw,124px);line-height:.92;letter-spacing:-.05em}
+.contact p{margin:20px auto 0;max-width:40ch;font-size:var(--t-lead);line-height:1.35}
+.cta{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:26px}
+.copyline{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:16px;font-size:14px}
+.copyline code{font-family:var(--f-mono);font-size:13px;user-select:all}
+.copy{font:500 12px/1 var(--f-sans);border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:3px;padding:5px 8px;cursor:pointer}
+.ring-stage{height:clamp(230px,30vw,400px);perspective:1500px;display:grid;place-items:center;margin-top:clamp(20px,3vw,40px)}
+.ring{position:relative;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-16deg)}
+.ring figure{--w:clamp(48px,5.6vw,92px);position:absolute;left:calc(var(--w) / -2);top:calc(var(--w) * -.66);width:var(--w);aspect-ratio:3/4;overflow:hidden;background:var(--soft)}
+.ring img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- footer ---------- */
+.foot{padding-top:clamp(60px,7vw,100px)}
+.foot-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 24px;border-top:1px solid var(--ink);padding-top:14px}
+.foot-cols>div{min-width:0}
+.foot-cols h4{margin:0 0 12px;font:500 15px/1.2 var(--f-sans)}
+.foot-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-cols a{text-decoration:none}
+.foot-cols a:hover{text-decoration:underline;text-underline-offset:3px}
+.foot-cols .mono{overflow-wrap:anywhere}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:clamp(40px,5vw,72px);padding-top:10px;border-top:1px solid var(--soft);color:var(--mute);font-size:13px}
+.legal a{text-decoration:none}
+.giant{overflow:clip;line-height:.8;padding-top:clamp(16px,2vw,28px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 4px)}
+.giant span{display:inline-block;font:400 17.2vw/.82 var(--f-sans);letter-spacing:-.06em;white-space:nowrap;text-transform:uppercase}
+
+/* language toggle */
+.nav .status span{padding:0}
+.lang{display:flex;gap:2px;margin-left:2px}
+.nav .lang button{padding:8px 9px;color:var(--mute);cursor:pointer}
+.nav .lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+/* text-only card */
+.card figure.type{display:grid;place-items:center;background:var(--ink);color:var(--paper);cursor:default}
+.type-in{display:grid;gap:12px;text-align:center;padding:16px}
+.type-in strong{font:400 clamp(34px,3.6vw,58px)/1 var(--f-sans);letter-spacing:-.045em}
+.type-in .mono{color:var(--mute)}
+/* Thai setting: looser leading so vowel and tone marks clear, no negative tracking */
+html[lang="th"] body{line-height:1.6}
+html[lang="th"] .hero-sub{line-height:1.2;letter-spacing:-.01em}
+html[lang="th"] .sec-head h2,html[lang="th"] .contact h2,html[lang="th"] .proj h3{line-height:1.18;letter-spacing:-.015em}
+html[lang="th"] .row .t{line-height:1.32;letter-spacing:-.015em}
+html[lang="th"] .card h3,html[lang="th"] .org,html[lang="th"] .gig h3,html[lang="th"] .credit strong,html[lang="th"] .type-in strong{letter-spacing:-.01em;line-height:1.3}
+html[lang="th"] .lead,html[lang="th"] .aside{line-height:1.7;letter-spacing:0}
+html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[lang="th"] .row .c,html[lang="th"] .row .f,html[lang="th"] .hero-meta a,html[lang="th"] .credit .mono{letter-spacing:0;text-transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:899px){
+  .card{--cw:min(76vw,340px)}
+  .two,.sec-head{grid-template-columns:minmax(0,1fr)}
+  .stick{position:static;padding-top:20px}
+  .foot-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gig{grid-template-columns:minmax(0,1fr)}
+  .gig .g2{grid-column:auto}
+  .floor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .floor-grid figure:last-child{grid-column:span 2;aspect-ratio:4/3}
+}
+@media (max-width:760px){
+  .nav .hide-s{display:none}
+  .nav .menu-btn{display:inline-block}
+  .hero-meta{grid-template-columns:minmax(0,1fr)}
+  .row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"c f" "t t";gap:2px 12px;padding:10px 0 12px}
+  .row .c{grid-area:c}.row .f{grid-area:f}
+  .row .t{grid-area:t;text-align:left;color:var(--ink)}
+  .spec{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .counts span{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="Suphakorn Yanprasong, back to top">Suphakorn Y.</a>
+  <nav class="nav" aria-label="Main">
+    <span class="status hide-s"><i aria-hidden="true"></i><span data-t="status">Open to work · Bangkok</span></span>
+    <a class="hide-s" href="#work" data-t="nav-work">Work</a>
+    <a class="hide-s" href="#about" data-t="nav-about">About</a>
+    <a class="hide-s" href="#contact" data-t="nav-contact">Contact</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="th" aria-pressed="false" lang="th">TH</button>
+    </div>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </nav>
+</header>
+<div class="menu-panel" id="menu-panel" hidden>
+  <span class="status"><i aria-hidden="true"></i><span data-t="status">Open to work · Bangkok</span></span>
+  <a href="#work" data-t="nav-work">Work</a>
+  <a href="#about" data-t="nav-about">About</a>
+  <a href="#contact" data-t="nav-contact">Contact</a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <h1><span class="ln"><span>Suphakorn</span></span> <span class="ln"><span>Yanprasong</span></span></h1>
+    <p class="hero-sub" data-t="hero-sub">On camera, on set, on the floor.</p>
+    <div class="hero-meta">
+      <span data-t="meta-1">Based in Bangkok, Thailand</span>
+      <span data-t="meta-2">Freelance talent since 2023</span>
+      <span data-t="meta-3">BFA Film &amp; Screen Business, Bangkok University</span>
+      <a href="#contact" data-t="meta-cta">Get in touch</a>
+    </div>
+    <figure class="hero-fig">
+      <div class="media"><img src="img/hero.jpg" width="1679" height="794" alt="Suphakorn in a light blue shirt holding a coffee tumbler on a walkway, still from the Rasa One brand film"></div>
+      <span class="tag" data-t="hero-tag">Selected work 2023–2026</span>
+      <figcaption class="cap mono"><span>Rasa One — Workplace Redefined</span><span data-t="hero-cap">Brand film, lead actor</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- STRIP -->
+  <section class="strip bleed" aria-hidden="true">
+    <div class="strip-track">
+      <figure><img src="img/t-face-1.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-set-2.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-barbie-1.jpg" width="480" height="639" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-face-3.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-event-gcircuit2.jpg" width="480" height="639" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-acai-b.jpg" width="480" height="520" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-set-1.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-face-2.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-yamaha-a.jpg" width="480" height="599" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-event-mmf.jpg" width="480" height="639" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-face-4.jpg" width="480" height="738" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-realme-b.jpg" width="480" height="599" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-toyota-a.jpg" width="480" height="599" alt="" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="sec-head">
+      <span class="tag" data-t="nav-about">About</span>
+      <h2 data-t="about-h">Hi, I'm Return.</h2>
+    </div>
+    <div class="two">
+      <div>
+        <p class="aside" data-t="about-aside">Commercial talent and event crew, trained in the business side of film.</p>
+        <figure class="portrait"><img src="img/profile.jpg" width="678" height="678" alt="Portrait of Suphakorn in a navy suit and tie" loading="lazy"></figure>
+      </div>
+      <div>
+        <p class="lead" data-t="about-1">I work in front of the camera and behind it. Since 2023 I've appeared in commercials and campaign stills for Coca-Cola, Toyota, Samsung, realme, Yamaha and other brands.</p>
+        <p class="lead" data-t="about-2">As a marketing and distribution intern at Warner Bros. Discovery, I worked on the Thai launches of <em>Barbie</em> and <em>Meg 2: The Trench</em>. On my thesis film, <em>The White Rabbit</em>, I ran locations from permits to budget, and the film went on to play in cinemas.</p>
+        <p class="lead" data-t="about-3">I'm at my best when people, schedules and details all have to come together at once.</p>
+        <a class="btn" href="#work" data-t="about-btn">See the work ↓</a>
+        <dl class="facts">
+          <div><dt data-t="f-edu">Education</dt><dd data-t="f-edu-d">BFA, Digital Media and Cinematic Arts. Major in Film and Screen Business, Second-Class Honours. Bangkok University, 2024</dd></div>
+          <div><dt data-t="f-lang">Languages</dt><dd data-t="f-lang-d">Thai (native) · English, TOEIC 680</dd></div>
+          <div><dt data-t="f-tools">Tools</dt><dd data-t="f-tools-d">PowerPoint, Word, Excel (basic), Photoshop, Illustrator, video editing</dd></div>
+          <div><dt data-t="f-str">Strengths</dt><dd data-t="f-str-d">Talking with people, working with many teams at once, permits and paperwork, budgets</dd></div>
+        </dl>
+        <div class="counts">
+          <div><b>8</b><span data-t="n-1">clients on camera</span></div>
+          <div><b>2</b><span data-t="n-2">studio releases at Warner Bros. Discovery</span></div>
+          <div><b>1</b><span data-t="n-3">feature film in cinemas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDEX -->
+  <section class="sec" id="work">
+    <div class="index-head">
+      <span class="tag" data-t="idx-tag">Selected work</span>
+      <span class="mono mute" data-t="idx-count">13 projects · 2023–2026</span>
+    </div>
+    <ul class="rows">
+      <li><a class="row" href="#p-toyota" data-img="img/toyota-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Toyota</span><span class="f" data-t="f-tvc">TVC + stills</span></a></li>
+      <li><a class="row" href="#p-coke"><span class="c" data-t="c-cam">On camera</span><span class="t">Coca-Cola</span><span class="f" data-t="f-billboard">Int'l billboard</span></a></li>
+      <li><a class="row" href="#p-samsung" data-img="img/samsung-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Samsung Music Studio 5</span><span class="f">TikTok</span></a></li>
+      <li><a class="row" href="#p-realme" data-img="img/realme-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">realme C75</span><span class="f">TikTok</span></a></li>
+      <li><a class="row" href="#p-yamaha" data-img="img/yamaha-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Yamaha Grand Filano</span><span class="f">TikTok</span></a></li>
+      <li><a class="row" href="#p-rasa" data-img="img/rasa-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Rasa One</span><span class="f" data-t="f-brandfilm">Brand film</span></a></li>
+      <li><a class="row" href="#p-acai" data-img="img/acai-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Acai Story</span><span class="f" data-t="f-stills">Stills</span></a></li>
+      <li><a class="row" href="#p-huachiew" data-img="img/huachiew-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t" data-t="t-hcu">Huachiew Chalermprakiet</span><span class="f">TikTok</span></a></li>
+      <li><a class="row" href="#p-barbie" data-img="img/barbie-1.jpg"><span class="c">Warner Bros.</span><span class="t">Barbie</span><span class="f" data-t="f-launch">Launch event</span></a></li>
+      <li><a class="row" href="#p-meg" data-img="img/meg-2.jpg"><span class="c">Warner Bros.</span><span class="t">Meg 2: The Trench</span><span class="f" data-t="f-promo">Promo shoot</span></a></li>
+      <li><a class="row" href="#white-rabbit" data-img="img/thesis-crew.jpg"><span class="c" data-t="c-thesis">Thesis film</span><span class="t">The White Rabbit</span><span class="f" data-t="f-loc">Locations</span></a></li>
+      <li><a class="row" href="#p-gcircuit" data-img="img/event-gcircuit.jpg"><span class="c" data-t="c-event">Event crew</span><span class="t">GCircuit Songkran</span><span class="f" data-t="f-vvip">VVIP guests</span></a></li>
+      <li><a class="row" href="#p-mmf" data-img="img/event-mmf.jpg"><span class="c" data-t="c-event">Event crew</span><span class="t">MMF 2023</span><span class="f" data-t="f-booth">Drinks booth</span></a></li>
+    </ul>
+  </section>
+
+  <!-- ON CAMERA -->
+  <section class="sec camera" id="on-camera">
+    <div class="cam-pin">
+      <div class="sec-head">
+        <span class="tag" data-t="cam-tag">Freelance · actor &amp; model</span>
+        <h2 data-t="cam-h">On camera</h2>
+      </div>
+      <div class="cam-intro">
+        <p data-t="cam-intro">Commercials, social spots, campaign stills and an international billboard. Cards link to the published work where it is public.</p>
+        <span class="mono mute" data-t="cam-tip">Hover or tap a photo for a second frame</span>
+      </div>
+      <div class="rail" id="rail">
+        <div class="track" id="track">
+          <article class="card" id="p-toyota">
+            <figure><img class="a" src="img/toyota-a.jpg" width="1170" height="1462" alt="Suphakorn in a red shirt in the back seat of a Toyota, campaign still" loading="lazy"><img class="b" src="img/toyota-b.jpg" width="635" height="794" alt="" loading="lazy"><span class="tag" data-t="r-actmod">Actor + model</span></figure>
+            <div class="card-meta mono"><span data-t="k-auto">Automotive</span><span data-t="y-2526">2025–2026</span></div>
+            <h3>Toyota <span>No.1 Trusted HEV</span></h3>
+            <p data-t="p-toyota">Actor in the 2025 hybrid TV commercial, and model for Toyota's 2025 and 2026 campaign stills.</p>
+            <div class="links"><a class="ulink" href="https://www.facebook.com/share/v/1AHaamJFes/" target="_blank" rel="noopener" data-t="l-toyota-1">2025 TVC on Facebook ↗</a><a class="ulink" href="https://www.instagram.com/p/DYzKY3YDZ55/" target="_blank" rel="noopener" data-t="l-toyota-2">2026 stills on Instagram ↗</a></div>
+          </article>
+          <article class="card" id="p-coke">
+            <figure class="type"><span class="tag" data-t="r-model">Model</span><div class="type-in"><strong>Coca-Cola</strong><span class="mono" data-t="coke-panel">International billboard · 2025</span></div></figure>
+            <div class="card-meta mono"><span data-t="k-bev">Beverage</span><span data-t="y-25">2025</span></div>
+            <h3 data-t="h-coke">Coca-Cola <span>International billboard</span></h3>
+            <p data-t="p-coke">Model in Coca-Cola's 2025 campaign stills, shot for an international billboard.</p>
+          </article>
+          <article class="card" id="p-samsung">
+            <figure><img class="a" src="img/samsung-a.jpg" width="946" height="1182" alt="Suphakorn dancing next to a black Samsung speaker in a living room" loading="lazy"><img class="b" src="img/samsung-b.jpg" width="946" height="1182" alt="" loading="lazy"><span class="tag" data-t="r-actor">Actor</span></figure>
+            <div class="card-meta mono"><span data-t="k-tech">Consumer tech</span><span data-t="y-26">2026</span></div>
+            <h3>Samsung <span>Music Studio 5</span></h3>
+            <p data-t="p-samsung">Actor in a TikTok spot for Samsung's Music Studio 5 speaker, from unboxing to listening at home.</p>
+            <div class="links"><a class="ulink" href="https://vt.tiktok.com/ZSbBnBsQH/" target="_blank" rel="noopener" data-t="l-tiktok">Watch on TikTok ↗</a></div>
+          </article>
+          <article class="card" id="p-realme">
+            <figure><img class="a" src="img/realme-a.jpg" width="946" height="1182" alt="Suphakorn holding a realme C75 phone on a basketball court" loading="lazy"><img class="b" src="img/realme-b.jpg" width="946" height="1182" alt="" loading="lazy"><span class="tag" data-t="r-actor">Actor</span></figure>
+            <div class="card-meta mono"><span data-t="k-phone">Smartphone</span><span>TikTok × 2</span></div>
+            <h3>realme <span>C75</span></h3>
+            <p data-t="p-realme">Lead in two TikTok spots for the realme C75, shot on an outdoor basketball court in the city.</p>
+            <div class="links"><a class="ulink" href="https://vt.tiktok.com/ZSj39ACEx/" target="_blank" rel="noopener" data-t="l-spot1">Spot 1 ↗</a><a class="ulink" href="https://vt.tiktok.com/ZSjWgxMH9/" target="_blank" rel="noopener" data-t="l-spot2">Spot 2 ↗</a></div>
+          </article>
+          <article class="card" id="p-yamaha">
+            <figure><img class="a" src="img/yamaha-a.jpg" width="946" height="1182" alt="Suphakorn in a white helmet seated on a Yamaha Grand Filano Hybrid scooter" loading="lazy"><img class="b" src="img/yamaha-b.jpg" width="946" height="1182" alt="" loading="lazy"><span class="tag" data-t="r-actor">Actor</span></figure>
+            <div class="card-meta mono"><span data-t="k-moto">Motorcycle</span><span>TikTok</span></div>
+            <h3>Yamaha <span>Grand Filano Hybrid</span></h3>
+            <p data-t="p-yamaha">On-screen talent for the Grand Filano Hybrid scooter on Yamaha Society Thailand's TikTok.</p>
+            <div class="links"><a class="ulink" href="https://vt.tiktok.com/ZSMB9Db1U/" target="_blank" rel="noopener" data-t="l-tiktok">Watch on TikTok ↗</a></div>
+          </article>
+          <article class="card" id="p-rasa">
+            <figure><img class="a" src="img/rasa-a.jpg" width="635" height="794" alt="Suphakorn on a covered walkway, still from the Rasa One film" loading="lazy"><img class="b" src="img/rasa-b.jpg" width="635" height="794" alt="" loading="lazy"><span class="tag" data-t="r-lead">Lead actor</span></figure>
+            <div class="card-meta mono"><span data-t="k-office">Office building</span><span>YouTube</span></div>
+            <h3>Rasa One <span>Workplace Redefined</span></h3>
+            <p data-t="p-rasa">Lead in the brand film for the Rasa One office building, shot around its walkways and lobby.</p>
+            <div class="links"><a class="ulink" href="https://youtu.be/iex9pIC_dgo" target="_blank" rel="noopener" data-t="l-yt">Watch on YouTube ↗</a></div>
+          </article>
+          <article class="card" id="p-acai">
+            <figure><img class="a" src="img/acai-a.jpg" width="1100" height="1190" alt="Suphakorn and a friend sharing acai drinks at a café table" loading="lazy"><img class="b" src="img/acai-b.jpg" width="1100" height="1192" alt="" loading="lazy"><span class="tag" data-t="r-model">Model</span></figure>
+            <div class="card-meta mono"><span data-t="k-cafe">Café chain</span><span data-t="y-25">2025</span></div>
+            <h3 data-t="h-acai">Acai Story <span>Campaign stills</span></h3>
+            <p data-t="p-acai">Model in campaign stills for Acai Story, a superfood café chain with branches across Bangkok.</p>
+            <div class="links"><a class="ulink" href="https://www.instagram.com/p/DJL7phMhhIV/" target="_blank" rel="noopener" data-t="l-ig">See on Instagram ↗</a></div>
+          </article>
+          <article class="card" id="p-huachiew">
+            <figure><img class="a" src="img/huachiew-a.jpg" width="635" height="794" alt="Suphakorn in a yellow T-shirt talking across a desk" loading="lazy"><img class="b" src="img/huachiew-b.jpg" width="635" height="794" alt="" loading="lazy"><span class="tag" data-t="r-actor">Actor</span></figure>
+            <div class="card-meta mono"><span data-t="k-uni">University</span><span>TikTok</span></div>
+            <h3 data-t="h-hcu">Huachiew Chalermprakiet <span>University</span></h3>
+            <p data-t="p-hcu">Actor in a TikTok spot for the university's Chinese business administration program.</p>
+            <div class="links"><a class="ulink" href="https://vt.tiktok.com/ZS5WaXBB6/" target="_blank" rel="noopener" data-t="l-tiktok">Watch on TikTok ↗</a></div>
+          </article>
+        </div>
+      </div>
+      <div class="rail-foot">
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+        <span class="mono mute" id="rail-hint">Swipe →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHIND THE RELEASE -->
+  <section class="sec wbd" id="warner">
+    <div class="sec-head">
+      <span class="tag" data-t="wb-tag">Internship · Jun–Aug 2023</span>
+      <h2 data-t="wb-h">Behind the release</h2>
+    </div>
+    <div class="two">
+      <div class="stick">
+        <p class="org">Warner Bros. Discovery, Thailand</p>
+        <span class="mono" data-t="wb-role">Marketing &amp; Distribution Intern</span>
+        <p class="lead" data-t="wb-1">For three months I worked on two major Hollywood releases, from the planning before release, through opening week, to the wrap-up after the run.</p>
+        <p class="lead" data-t="wb-2">I saw what went wrong on each project and how the team fixed it, which taught me as much as what went right.</p>
+      </div>
+      <div>
+        <article class="proj" id="p-barbie">
+          <h3 data-t="h-barbie">Barbie <span class="mute">Thai launch, Siam Paragon</span></h3>
+          <dl class="spec">
+            <div><dt data-t="d-thai">In Thai cinemas</dt><dd data-t="d-barbie-date">20 July 2023</dd></div>
+            <div><dt data-t="d-venue">Venue</dt><dd data-t="d-paragon">Siam Paragon</dd></div>
+            <div><dt data-t="d-role">My role</dt><dd data-t="d-barbie-role">Launch event, KOLs</dd></div>
+          </dl>
+          <p data-t="p-barbie">I helped plan the layout of the launch event at Siam Paragon, looked after the influencers and celebrities who came on the night, and kept the event running in order. Before that, I helped shortlist KOLs for the campaign and sat in on promotion planning meetings.</p>
+          <div class="pair">
+            <figure><img src="img/barbie-1.jpg" width="1000" height="1333" alt="Suphakorn giving a thumbs up at the pink Barbie launch set" loading="lazy"></figure>
+            <figure><img src="img/barbie-2.jpg" width="1000" height="1333" alt="Suphakorn with a guest dressed in Barbie pink at the launch" loading="lazy"></figure>
+          </div>
+          <figure class="wide"><img src="img/barbie-plan.jpg" width="1280" height="720" alt="3D floor plan of the Barbie launch event, with a pink arch, photo booths and a stage" loading="lazy"></figure>
+          <figcaption class="fig-cap mono" data-t="cap-plan">Launch event floor plan</figcaption>
+        </article>
+        <article class="proj" id="p-meg">
+          <h3 data-t="h-meg">Meg 2: The Trench <span class="mute">Promo shoot</span></h3>
+          <dl class="spec">
+            <div><dt data-t="d-thai">In Thai cinemas</dt><dd data-t="d-meg-date">2 August 2023</dd></div>
+            <div><dt data-t="d-set">Set</dt><dd data-t="d-green">Green-screen studio</dd></div>
+            <div><dt data-t="d-role">My role</dt><dd data-t="d-meg-role">Talent care, script check</dd></div>
+          </dl>
+          <p data-t="p-meg">I looked after the artists booked for a promotional shoot, checked the script for errors and made sure the set ran to plan, while learning each step of how a film promo gets made.</p>
+          <div class="pair">
+            <figure><img src="img/meg-2.jpg" width="1000" height="1333" alt="Monitor showing the Meg 2: The Trench title in front of a green screen" loading="lazy"></figure>
+            <figure><img src="img/meg-1.jpg" width="1000" height="1333" alt="Crew and talent on the green-screen set, seen past a monitor" loading="lazy"></figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE WHITE RABBIT -->
+  <section class="sec film" id="white-rabbit">
+    <div class="sec-head">
+      <span class="tag" data-t="film-tag">Thesis film · Bangkok University</span>
+      <h2>The White Rabbit <span class="th" lang="th">แดนฝันอันตรธาน</span></h2>
+    </div>
+    <figure class="film-img bleed"><img src="img/thesis-crew.jpg" width="2000" height="1333" alt="The cast and crew of The White Rabbit gathered for a group photo at night" loading="lazy"></figure>
+    <div class="credit">
+      <span class="mono" data-t="credit-role">Location manager</span>
+      <strong data-t="credit-name">Suphakorn Yanprasong</strong>
+    </div>
+    <div class="two">
+      <div>
+        <dl class="spec">
+          <div><dt data-t="d-incinema">In cinemas</dt><dd data-t="d-film-date">28 May 2026</dd></div>
+          <div><dt data-t="d-genre">Genre</dt><dd data-t="d-genre-d">Drama, mystery, romance</dd></div>
+          <div><dt data-t="d-runtime">Runtime</dt><dd data-t="d-runtime-d">1 h 15 min · 15+</dd></div>
+        </dl>
+        <figure class="trailer">
+          <div><img src="img/thesis-trailer.jpg" width="776" height="478" alt="Official trailer thumbnail for The White Rabbit, แดนฝันอันตรธาน" loading="lazy"></div>
+          <figcaption class="fig-cap mono" data-t="cap-trailer">Official trailer, SF Cinema</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p class="lead" data-t="film-1">The shoot moved through a long list of places, each with its own owner and its own rules. I wrote the permit requests, worked with every owner and agency until we had approval, and kept the paperwork in order.</p>
+        <p class="lead" data-t="film-2">I also planned how many people and vehicles went to each site, and managed the location budget. The film went on to play at SF Cinema and Samyan Mitrtown, with tickets on public sale.</p>
+        <ul class="chips" aria-label="Location types">
+          <li data-t="ch-1">Private property</li><li data-t="ch-2">Government sites</li><li data-t="ch-3">Hospital</li><li data-t="ch-4">Community</li><li data-t="ch-5">School</li><li data-t="ch-6">National park</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ON THE FLOOR -->
+  <section class="sec floor" id="events">
+    <div class="sec-head">
+      <span class="tag" data-t="c-event">Event crew</span>
+      <h2 data-t="floor-h">On the floor</h2>
+    </div>
+    <div class="floor-grid">
+      <figure><img src="img/event-gcircuit.jpg" width="1000" height="1333" alt="Suphakorn with a crew pass in an empty concert hall before doors open" loading="lazy"></figure>
+      <figure><img src="img/event-gcircuit2.jpg" width="1000" height="1333" alt="Suphakorn in a red GCircuit crew shirt holding his pass under stage lights" loading="lazy"></figure>
+      <figure><img src="img/event-mmf.jpg" width="1000" height="1333" alt="Suphakorn behind the counter of the est Cola drinks booth" loading="lazy"></figure>
+    </div>
+    <div class="gig">
+      <div class="g2" id="p-gcircuit">
+        <h3>GCircuit Songkran</h3>
+        <span class="mono" data-t="gc-role">Crew · VVIP guest care</span>
+        <p data-t="gc-p">I looked after VVIP guests through the festival. When the payment system went down, I brought international guests their orders first, apologized, and came back to collect payment once the team had the system working again.</p>
+      </div>
+      <div id="p-mmf">
+        <h3>MMF 2023</h3>
+        <span class="mono" data-t="mmf-role">Crew · est Cola drinks booth</span>
+        <p data-t="mmf-p">I staffed the est Cola drinks booth, selling and serving drinks to the event crowd.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact bleed" id="contact">
+    <span class="tag" data-t="nav-contact">Contact</span>
+    <h2 data-t="ct-h">Let's work<br>together</h2>
+    <p data-t="ct-p">Open to full-time roles and freelance bookings in Bangkok.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:suphakornyanprasong@gmail.com" data-t="ct-mail">Email me</a>
+      <a class="btn ghost" href="https://www.instagram.com/returnuturn/" target="_blank" rel="noopener">Instagram @returnuturn ↗</a>
+    </div>
+    <div class="copyline">
+      <code id="email">suphakornyanprasong@gmail.com</code>
+      <button class="copy" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="ring-stage" aria-hidden="true"><div class="ring" id="ring"></div></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-cols">
+    <div><h4 data-t="ft-menu">Menu</h4><ul><li><a href="#work" data-t="nav-work">Work</a></li><li><a href="#about" data-t="nav-about">About</a></li><li><a href="#contact" data-t="nav-contact">Contact</a></li></ul></div>
+    <div><h4 data-t="nav-contact">Contact</h4><ul><li class="mono">suphakornyanprasong@gmail.com</li><li class="mono">091 539 4959</li><li><a href="https://www.instagram.com/returnuturn/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
+    <div><h4 data-t="ft-work">What I do</h4><ul><li data-t="ft-w1">Commercial talent</li><li data-t="c-event">Event crew</li><li data-t="ft-w3">Film marketing</li></ul></div>
+    <div><h4 data-t="ft-based">Based in</h4><ul><li data-t="ft-bkk">Bangkok, Thailand</li><li class="mute" data-t="ft-langs">Thai · English</li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Suphakorn Yanprasong</span><a href="#top" data-t="ft-top">Back to top ↑</a></div>
+  <div class="giant" aria-hidden="true"><span id="giant">Suphakorn</span></div>
+</footer>
+
+<div class="preview" id="preview" aria-hidden="true"><div><img alt=""></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const hasG = !!(window.gsap && window.ScrollTrigger);
+  const header = document.querySelector('.top');
+  const headerH = () => header.offsetHeight;
+  if (hasG) gsap.registerPlugin(ScrollTrigger);
+  let lang = 'en';
+  const UI = {
+    en: { menu: 'Menu', close: 'Close', copy: 'Copy email', copied: 'Copied', sel: 'Selected, press Ctrl+C', swipe: 'Swipe →', scroll: 'Scroll ↓' },
+    th: { menu: 'เมนู', close: 'ปิด', copy: 'คัดลอกอีเมล', copied: 'คัดลอกแล้ว', sel: 'เลือกไว้แล้ว กด Ctrl+C', swipe: 'ปัด →', scroll: 'เลื่อนลง ↓' }
+  };
+  const ui = k => UI[lang][k];
+  let hintMode = 'swipe';
+
+  /* smooth scroll */
+  let lenis = null;
+  if (!reduce && window.Lenis) {
+    try {
+      lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+      if (hasG) {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(t => lenis.raf(t * 1000));
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+        requestAnimationFrame(raf);
+      }
+    } catch (e) { lenis = null; }
+  }
+  const scrollToY = y => {
+    y = Math.max(0, y);
+    if (lenis) lenis.scrollTo(y, { duration: 1.2 });
+    else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+  };
+
+  /* mobile menu */
+  const menuBtn = document.getElementById('menu-btn');
+  const panel = document.getElementById('menu-panel');
+  const closeMenu = () => { panel.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.textContent = ui('menu'); };
+  menuBtn.addEventListener('click', () => {
+    const open = panel.hidden;
+    panel.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? ui('close') : ui('menu');
+  });
+
+  /* on-camera rail: pinned horizontal scroll on wide screens, swipe on phones */
+  const rail = document.getElementById('rail');
+  const track = document.getElementById('track');
+  const bar = document.getElementById('bar');
+  const hint = document.getElementById('rail-hint');
+  let camST = null;
+  const railProgress = () => {
+    if (camST) return;
+    const max = rail.scrollWidth - rail.clientWidth;
+    const p = max > 0 ? rail.scrollLeft / max : 1;
+    bar.style.transform = `scaleX(${Math.max(0.14, p)})`;
+  };
+  rail.addEventListener('scroll', railProgress, { passive: true });
+  railProgress();
+
+  /* tap a card image to see the second frame on touch screens */
+  document.querySelectorAll('.card figure').forEach(f => f.addEventListener('click', () => f.parentElement.classList.toggle('flip')));
+
+  function goToCard(card) {
+    if (camST) {
+      const max = track.scrollWidth - rail.clientWidth;
+      const p = max > 0 ? Math.min(1, card.offsetLeft / max) : 0;
+      scrollToY(camST.start + (camST.end - camST.start) * p + 1);
+    } else {
+      const sec = document.getElementById('on-camera');
+      scrollToY(sec.getBoundingClientRect().top + window.scrollY - headerH() + 40);
+      rail.scrollTo({ left: card.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+
+  /* in-page links */
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = id ? document.getElementById(id) : null;
+    if (!el) return;
+    e.preventDefault();
+    closeMenu();
+    if (el.classList.contains('card')) return goToCard(el);
+    const off = id === 'top' ? 0 : headerH() + 8;
+    scrollToY(el.getBoundingClientRect().top + window.scrollY - off);
+  }));
+
+  /* index hover preview */
+  const pv = document.getElementById('preview');
+  const pvImg = pv.querySelector('img');
+  if (fine) {
+    let x = innerWidth / 2, y = innerHeight / 2, tx = x, ty = y, running = false;
+    const loop = () => {
+      x += (tx - x) * 0.16; y += (ty - y) * 0.16;
+      pv.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      if (pv.classList.contains('on') || Math.abs(tx - x) > 0.5) requestAnimationFrame(loop); else running = false;
+    };
+    const kick = () => { if (!running) { running = true; requestAnimationFrame(loop); } };
+    window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; if (pv.classList.contains('on')) kick(); }, { passive: true });
+    document.querySelectorAll('.row').forEach(r => {
+      if (!r.dataset.img) return;
+      const pre = new Image(); pre.src = r.dataset.img;
+      r.addEventListener('mouseenter', () => { pvImg.src = r.dataset.img; pv.classList.add('on'); kick(); });
+      r.addEventListener('mouseleave', () => pv.classList.remove('on'));
+    });
+  }
+
+  /* copy email */
+  const copyBtn = document.getElementById('copy');
+  const emailEl = document.getElementById('email');
+  copyBtn.addEventListener('click', () => {
+    const done = () => { copyBtn.textContent = ui('copied'); setTimeout(() => copyBtn.textContent = ui('copy'), 1800); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(emailEl);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      copyBtn.textContent = ui('sel');
+    };
+    try { navigator.clipboard.writeText(emailEl.textContent.trim()).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  /* 3D ring */
+  const ring = document.getElementById('ring');
+  const ringImgs = ['toyota-a','samsung-a','face-1','realme-a','barbie-1','yamaha-a','set-2','rasa-a','event-gcircuit2','acai-a','face-3','huachiew-a','meg-2','event-mmf','toyota-b','face-2','realme-b','barbie-2','samsung-b','set-1','yamaha-b','event-gcircuit','face-4','rasa-b'];
+  ringImgs.forEach(n => {
+    const f = document.createElement('figure');
+    const im = document.createElement('img');
+    im.src = `img/t-${n}.jpg`; im.alt = ''; im.loading = 'lazy'; im.decoding = 'async';
+    f.appendChild(im); ring.appendChild(f);
+  });
+  const ringItems = [...ring.children];
+  const layoutRing = () => {
+    const R = Math.min(600, innerWidth * 0.4);
+    ringItems.forEach((it, i) => { it.style.transform = `rotateY(${i * 360 / ringItems.length}deg) translateZ(${R}px)`; });
+  };
+  layoutRing();
+  let ang = 0, vel = 0, lastY = window.scrollY, ringOn = false;
+  const spin = () => {
+    const dy = window.scrollY - lastY; lastY = window.scrollY;
+    vel = (vel + dy * 0.012) * 0.93;
+    ang += 0.07 + vel;
+    ring.style.transform = `rotateX(-16deg) rotateY(${ang}deg)`;
+    if (ringOn) requestAnimationFrame(spin);
+  };
+  if (!reduce && 'IntersectionObserver' in window) {
+    new IntersectionObserver(es => es.forEach(e => {
+      const was = ringOn; ringOn = e.isIntersecting;
+      if (ringOn && !was) { lastY = window.scrollY; requestAnimationFrame(spin); }
+    })).observe(ring.parentElement);
+  } else { ring.style.transform = 'rotateX(-16deg) rotateY(20deg)'; }
+
+  /* giant footer wordmark fit */
+  const giant = document.getElementById('giant');
+  const fitGiant = () => {
+    giant.style.fontSize = '100px';
+    const w = giant.scrollWidth; const avail = giant.parentElement.clientWidth;
+    if (w > 0) giant.style.fontSize = (100 * avail / w * 0.995) + 'px';
+  };
+  fitGiant();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { fitGiant(); if (hasG) ScrollTrigger.refresh(); });
+
+  let rt;
+  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { layoutRing(); fitGiant(); }, 150); });
+
+  /* scroll-linked motion */
+  if (hasG && !reduce) {
+    gsap.fromTo('.hero-fig img', { scale: 1.12, yPercent: -3 }, {
+      scale: 1, yPercent: 4, ease: 'none',
+      scrollTrigger: { trigger: '.hero-fig', start: 'top 80%', end: 'bottom top', scrub: true }
+    });
+
+    const strip = document.querySelector('.strip-track');
+    gsap.to(strip, {
+      x: () => -Math.max(0, strip.scrollWidth - innerWidth * 0.9),
+      ease: 'none',
+      scrollTrigger: { trigger: '.strip', start: 'top bottom', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true }
+    });
+    gsap.utils.toArray('.strip figure').forEach((f, i) => {
+      gsap.fromTo(f, { yPercent: (i % 3) * 6 }, {
+        yPercent: -((i % 3) * 6), ease: 'none',
+        scrollTrigger: { trigger: '.strip', start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+    });
+
+    gsap.fromTo('.film-img img', { yPercent: -8 }, {
+      yPercent: 6, ease: 'none',
+      scrollTrigger: { trigger: '.film-img', start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+
+    gsap.from('#giant', {
+      yPercent: 45, ease: 'none',
+      scrollTrigger: { trigger: '.foot', start: 'top bottom', end: 'bottom bottom', scrub: true }
+    });
+
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 900px)', () => {
+      rail.classList.add('pinned');
+      rail.scrollLeft = 0;
+      hintMode = 'scroll'; hint.textContent = ui('scroll');
+      const dist = () => Math.max(0, track.scrollWidth - rail.clientWidth);
+      const tw = gsap.to(track, {
+        x: () => -dist(), ease: 'none',
+        scrollTrigger: {
+          trigger: '.cam-pin', start: 'top top', end: () => '+=' + dist(),
+          pin: true, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1,
+          onUpdate: s => { bar.style.transform = `scaleX(${Math.max(0.14, s.progress)})`; }
+        }
+      });
+      camST = tw.scrollTrigger;
+      return () => { camST = null; rail.classList.remove('pinned'); hintMode = 'swipe'; hint.textContent = ui('swipe'); railProgress(); };
+    });
+
+    addEventListener('load', () => ScrollTrigger.refresh());
+  }
+
+  /* language: English by default, Thai on request (remembered per viewer; #th in the link opens Thai) */
+  const TH = {
+    'status':'พร้อมเริ่มงาน · กรุงเทพฯ',
+    'nav-work':'ผลงาน','nav-about':'เกี่ยวกับผม','nav-contact':'ติดต่อ',
+    'hero-sub':'หน้ากล้อง ในกองถ่าย และหน้างานจริง',
+    'meta-1':'อยู่ที่กรุงเทพฯ ประเทศไทย',
+    'meta-2':'ฟรีแลนซ์นักแสดงและนายแบบ ตั้งแต่ปี 2566',
+    'meta-3':'ศิลปกรรมศาสตรบัณฑิต มหาวิทยาลัยกรุงเทพ',
+    'meta-cta':'ติดต่อผม',
+    'hero-tag':'ผลงานคัดสรร 2566–2569',
+    'hero-cap':'ภาพยนตร์แบรนด์ · นักแสดงนำ',
+    'about-h':'สวัสดีครับ ผมรีเทิร์น',
+    'about-aside':'นักแสดงโฆษณาและทีมงานอีเวนต์ ที่เรียนจบด้านธุรกิจภาพยนตร์',
+    'about-1':'ผมทำงานทั้งหน้ากล้องและหลังกล้อง ตั้งแต่ปี 2566 ผมร่วมงานโฆษณาและภาพนิ่งกับแบรนด์อย่าง Coca-Cola, Toyota, Samsung, realme, Yamaha และอีกหลายแบรนด์',
+    'about-2':'ช่วงฝึกงานฝ่ายการตลาดและการจัดจำหน่ายที่ Warner Bros. Discovery ผมได้ร่วมงานเปิดตัวภาพยนตร์ <em>Barbie</em> และ <em>Meg 2: The Trench</em> ในไทย ส่วนหนังธีสิสเรื่อง <em>The White Rabbit</em> ผมดูแลโลเคชั่นตั้งแต่การขออนุญาตไปจนถึงงบประมาณ และหนังได้เข้าฉายในโรงภาพยนตร์',
+    'about-3':'ผมทำงานได้ดีที่สุดเมื่อต้องทำให้คน ตารางเวลา และรายละเอียดทุกอย่างลงตัวไปพร้อมกัน',
+    'about-btn':'ดูผลงาน ↓',
+    'f-edu':'การศึกษา','f-edu-d':'ศิลปกรรมศาสตรบัณฑิต (Digital Media and Cinematic Arts) สาขา Film and Screen Business เกียรตินิยมอันดับ 2 มหาวิทยาลัยกรุงเทพ ปี 2567',
+    'f-lang':'ภาษา','f-lang-d':'ไทย (ภาษาแม่) · อังกฤษ TOEIC 680',
+    'f-tools':'โปรแกรม','f-tools-d':'PowerPoint, Word, Excel (พื้นฐาน), Photoshop, Illustrator, ตัดต่อวิดีโอ',
+    'f-str':'จุดแข็ง','f-str-d':'สื่อสารกับคน ประสานงานหลายทีมพร้อมกัน งานขออนุญาตและเอกสาร งบประมาณ',
+    'n-1':'ลูกค้างานหน้ากล้อง','n-2':'ภาพยนตร์ฟอร์มใหญ่ที่ Warner Bros. Discovery','n-3':'ภาพยนตร์ที่ได้เข้าฉายในโรง',
+    'idx-tag':'ผลงานคัดสรร','idx-count':'13 ผลงาน · 2566–2569',
+    'c-cam':'งานหน้ากล้อง','c-thesis':'หนังธีสิส','c-event':'ทีมงานอีเวนต์',
+    'f-tvc':'TVC + ภาพนิ่ง','f-billboard':'บิลบอร์ดนานาชาติ','f-brandfilm':'ภาพยนตร์แบรนด์','f-stills':'ภาพนิ่ง','f-launch':'งานเปิดตัว','f-promo':'ถ่ายโปรโมต','f-loc':'โลเคชั่น','f-vvip':'ดูแลแขก VVIP','f-booth':'บูธเครื่องดื่ม',
+    't-hcu':'หัวเฉียวเฉลิมพระเกียรติ',
+    'cam-tag':'ฟรีแลนซ์ · นักแสดงและนายแบบ','cam-h':'งานหน้ากล้อง',
+    'cam-intro':'โฆษณา คลิปโซเชียล ภาพนิ่งแคมเปญ และบิลบอร์ดระดับนานาชาติ การ์ดที่มีผลงานเผยแพร่แล้วจะมีลิงก์ให้กดดู',
+    'cam-tip':'ชี้หรือแตะรูปเพื่อดูอีกภาพ',
+    'r-actmod':'นักแสดง + นายแบบ','r-model':'นายแบบ','r-actor':'นักแสดง','r-lead':'นักแสดงนำ',
+    'k-auto':'ยานยนต์','k-bev':'เครื่องดื่ม','k-tech':'อุปกรณ์เทคโนโลยี','k-phone':'สมาร์ตโฟน','k-moto':'จักรยานยนต์','k-office':'อาคารสำนักงาน','k-cafe':'ร้านคาเฟ่','k-uni':'มหาวิทยาลัย',
+    'y-2526':'2568–2569','y-25':'2568','y-26':'2569',
+    'p-toyota':'นักแสดงในโฆษณาทีวีรถยนต์ไฮบริดปี 2568 และนายแบบภาพนิ่งแคมเปญของ Toyota ปี 2568 และ 2569',
+    'l-toyota-1':'TVC ปี 2568 บน Facebook ↗','l-toyota-2':'ภาพนิ่งปี 2569 บน Instagram ↗',
+    'coke-panel':'บิลบอร์ดนานาชาติ · 2568',
+    'h-coke':'Coca-Cola <span>บิลบอร์ดนานาชาติ</span>',
+    'p-coke':'นายแบบภาพนิ่งแคมเปญ Coca-Cola ปี 2568 ที่ถ่ายสำหรับบิลบอร์ดระดับนานาชาติ',
+    'p-samsung':'นักแสดงในคลิป TikTok ของลำโพง Samsung Music Studio 5 ตั้งแต่แกะกล่องจนถึงเปิดฟังที่บ้าน',
+    'l-tiktok':'ดูบน TikTok ↗',
+    'p-realme':'นักแสดงนำในคลิป TikTok 2 ชิ้นของ realme C75 ถ่ายทำที่สนามบาสกลางเมือง',
+    'l-spot1':'คลิปที่ 1 ↗','l-spot2':'คลิปที่ 2 ↗',
+    'p-yamaha':'นักแสดงในคลิปสกูตเตอร์ Grand Filano Hybrid บน TikTok ของ Yamaha Society Thailand',
+    'p-rasa':'นักแสดงนำในภาพยนตร์แบรนด์ของอาคารสำนักงาน Rasa One ถ่ายทำตามทางเดินและล็อบบี้ของอาคาร',
+    'l-yt':'ดูบน YouTube ↗',
+    'h-acai':'Acai Story <span>ภาพนิ่งแคมเปญ</span>',
+    'p-acai':'นายแบบภาพนิ่งแคมเปญของ Acai Story ร้านคาเฟ่ซูเปอร์ฟู้ดที่มีหลายสาขาในกรุงเทพฯ',
+    'l-ig':'ดูบน Instagram ↗',
+    'h-hcu':'มหาวิทยาลัยหัวเฉียว <span>เฉลิมพระเกียรติ</span>',
+    'p-hcu':'นักแสดงในคลิป TikTok ของหลักสูตรบริหารธุรกิจจีน มหาวิทยาลัยหัวเฉียวเฉลิมพระเกียรติ',
+    'wb-tag':'ฝึกงาน · มิ.ย.–ส.ค. 2566','wb-h':'เบื้องหลังหนังเข้าโรง',
+    'wb-role':'นักศึกษาฝึกงาน ฝ่ายการตลาดและการจัดจำหน่าย',
+    'wb-1':'ตลอด 3 เดือน ผมได้ร่วมงานกับภาพยนตร์ฮอลลีวูดฟอร์มใหญ่ 2 เรื่อง ตั้งแต่วางแผนก่อนฉาย สัปดาห์เปิดตัว จนถึงสรุปงานหลังหนังออกจากโรง',
+    'wb-2':'ผมได้เห็นว่าแต่ละโปรเจกต์มีจุดไหนผิดพลาดและทีมแก้ไขอย่างไร ซึ่งสอนผมได้มากพอๆ กับสิ่งที่ทำได้ดี',
+    'h-barbie':'Barbie <span class="mute">งานเปิดตัวในไทย สยามพารากอน</span>',
+    'd-thai':'เข้าฉายในไทย','d-barbie-date':'20 ก.ค. 2566','d-venue':'สถานที่','d-paragon':'สยามพารากอน','d-role':'หน้าที่','d-barbie-role':'งานเปิดตัว, KOL',
+    'p-barbie':'ผมช่วยวางผังงานเปิดตัวที่สยามพารากอน ดูแลอินฟลูเอนเซอร์และดาราที่มาร่วมงาน และดูแลให้งานเป็นระเบียบเรียบร้อย ก่อนหน้านั้นผมช่วยคัดเลือก KOL สำหรับแคมเปญ และเข้าร่วมประชุมวางแผนโปรโมต',
+    'cap-plan':'ผังงานเปิดตัว',
+    'h-meg':'Meg 2: The Trench <span class="mute">ถ่ายทำโปรโมต</span>',
+    'd-meg-date':'2 ส.ค. 2566','d-set':'กองถ่าย','d-green':'สตูดิโอกรีนสกรีน','d-meg-role':'ดูแลศิลปิน, ตรวจสคริปต์',
+    'p-meg':'ผมดูแลศิลปินที่มาถ่ายทำโปรโมต ตรวจความถูกต้องของสคริปต์ และดูให้กองถ่ายเป็นไปตามแผน พร้อมเรียนรู้ทุกขั้นตอนของการทำโปรโมตภาพยนตร์',
+    'film-tag':'หนังธีสิส · มหาวิทยาลัยกรุงเทพ',
+    'credit-role':'ผู้จัดการโลเคชั่น','credit-name':'ศุภกร ญาณประสงค์',
+    'd-incinema':'เข้าฉาย','d-film-date':'28 พ.ค. 2569','d-genre':'แนว','d-genre-d':'ดราม่า ลึกลับ โรแมนติก','d-runtime':'ความยาว','d-runtime-d':'1 ชม. 15 นาที · เรต 15+',
+    'cap-trailer':'ตัวอย่างหนังอย่างเป็นทางการ, SF Cinema',
+    'film-1':'หนังถ่ายทำในหลายสถานที่ แต่ละที่มีเจ้าของและกฎของตัวเอง ผมเขียนหนังสือขออนุญาต ประสานกับเจ้าของสถานที่และหน่วยงานทุกแห่งจนได้รับอนุมัติ และดูแลเอกสารทั้งหมด',
+    'film-2':'ผมวางแผนจำนวนคนและรถที่ไปแต่ละโลเคชั่น และดูแลงบประมาณสถานที่ หนังได้เข้าฉายที่ SF Cinema และสามย่านมิตรทาวน์ โดยเปิดขายตั๋วจริง',
+    'ch-1':'สถานที่เอกชน','ch-2':'สถานที่ราชการ','ch-3':'โรงพยาบาล','ch-4':'ชุมชน','ch-5':'โรงเรียน','ch-6':'อุทยานแห่งชาติ',
+    'floor-h':'หน้างานจริง',
+    'gc-role':'ทีมงาน · ดูแลแขก VVIP',
+    'gc-p':'ผมดูแลแขก VVIP ตลอดงาน ตอนที่ระบบชำระเงินขัดข้อง ผมนำของที่แขกชาวต่างชาติสั่งไปให้ก่อน ขอโทษ แล้วกลับมาเก็บเงินเมื่อทีมแก้ระบบเสร็จ',
+    'mmf-role':'ทีมงาน · บูธเครื่องดื่ม est Cola',
+    'mmf-p':'ผมประจำบูธเครื่องดื่ม est Cola ขายและเสิร์ฟเครื่องดื่มให้ผู้มาร่วมงาน',
+    'ct-h':'มาร่วมงาน<br>กันครับ',
+    'ct-p':'พร้อมรับงานประจำและงานฟรีแลนซ์ในกรุงเทพฯ',
+    'ct-mail':'ส่งอีเมล',
+    'ft-menu':'เมนู','ft-work':'งานที่ทำ','ft-w1':'นักแสดงโฆษณา','ft-w3':'การตลาดภาพยนตร์','ft-based':'ประจำที่','ft-bkk':'กรุงเทพฯ ประเทศไทย','ft-langs':'ไทย · อังกฤษ','ft-top':'กลับขึ้นด้านบน ↑'
+  };
+  const tNodes = [...document.querySelectorAll('[data-t]')];
+  tNodes.forEach(n => { n.dataset.en = n.innerHTML; });
+  const langBtns = [...document.querySelectorAll('.lang button')];
+  function setLang(l, save) {
+    lang = l === 'th' ? 'th' : 'en';
+    document.documentElement.lang = lang;
+    tNodes.forEach(n => { const v = lang === 'th' ? TH[n.dataset.t] : null; n.innerHTML = v != null ? v : n.dataset.en; });
+    langBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    menuBtn.textContent = panel.hidden ? ui('menu') : ui('close');
+    copyBtn.textContent = ui('copy');
+    hint.textContent = ui(hintMode);
+    if (save) { try { localStorage.setItem('portfolio-lang', lang); } catch (e) {} }
+    if (hasG) requestAnimationFrame(() => ScrollTrigger.refresh());
+  }
+  langBtns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang, true)));
+  let startLang = 'en';
+  if (location.hash === '#th' || location.hash === '#en') startLang = location.hash.slice(1);
+  else { try { startLang = localStorage.getItem('portfolio-lang') || 'en'; } catch (e) {} }
+  if (startLang === 'th') setLang('th', false);
+
+  /* deep link on load */
+  if (location.hash && location.hash !== '#th' && location.hash !== '#en') {
+    const el = document.getElementById(location.hash.slice(1));
+    if (el) setTimeout(() => { if (el.classList.contains('card')) goToCard(el); else scrollToY(el.getBoundingClientRect().top + window.scrollY - headerH() - 8); }, 500);
+  }
+})();
+</script>
+</body>
+</html>
