@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:title" content="Suphakorn Yanprasong Portfolio">
-<meta property="og:description" content="Commercial talent, event crew and film marketing, Bangkok.">
+<meta property="og:description" content="Commercial talent, event crew, film marketing and photography, Bangkok.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://suphakorn-yanp.github.io/portfolio/">
 <meta property="og:image" content="https://suphakorn-yanp.github.io/portfolio/img/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230d0d0c'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <title>Suphakorn Yanprasong Portfolio</title>
-<meta name="description" content="Portfolio of Suphakorn “Return” Yanprasong — commercial talent, event crew and film marketing, Bangkok.">
+<meta name="description" content="Portfolio of Suphakorn “Return” Yanprasong — commercial talent, event crew, film marketing and photography, Bangkok.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Anuphan:wght@400;500&display=swap">
@@ -69,6 +69,8 @@ h1,h2,h3{font-weight:400;text-wrap:balance}
 .status i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 var(--live);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(29,154,72,.45)}70%{box-shadow:0 0 0 7px rgba(29,154,72,0)}100%{box-shadow:0 0 0 0 rgba(29,154,72,0)}}
 .nav .menu-btn{display:none;cursor:pointer}
+.top{transition:background-color .35s,color .35s}
+.top.on-dark{--veil:rgba(13,13,12,.8);--ink:#f2f2f0;--paper:#0d0d0c;--wash:#1f1f1e;--mute:#8d8d89;color:var(--ink)}
 .menu-panel{position:fixed;z-index:39;top:calc(env(safe-area-inset-top,0px) + 58px);right:var(--g);left:var(--g);background:var(--wash);border-radius:6px;padding:8px;display:grid;gap:2px}
 .menu-panel[hidden]{display:none}
 @media (min-width:761px){.menu-panel{display:none}}
@@ -217,8 +219,46 @@ h1,h2,h3{font-weight:400;text-wrap:balance}
 .gig .mono{display:block;margin-top:4px;color:var(--mute)}
 .gig p{margin-top:12px;max-width:52ch}
 
+/* ---------- behind the lens: the one dark room on the wall ---------- */
+.lens{--paper:#0d0d0c;--ink:#f2f2f0;--mute:#8d8d89;--soft:#2b2b29;--wash:#1b1b1a;background:var(--paper);color:var(--ink);margin-top:clamp(110px,13vw,210px);padding:clamp(84px,10vw,150px) var(--g) clamp(28px,3vw,44px)}
+.lens-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:14px 32px;flex-wrap:wrap;margin-top:18px}
+.lens-intro .ulink{font-size:14px}
+.shoot{margin-top:clamp(70px,9vw,140px)}
+.shoot+.shoot{margin-top:clamp(36px,4vw,64px);border-top:1px solid var(--soft);padding-top:clamp(40px,5vw,72px)}
+.shoot-head{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;align-items:start}
+.shoot-head>*{min-width:0}
+.shoot h3{font-size:clamp(36px,4.6vw,72px);line-height:.95;letter-spacing:-.045em}
+.shoot h3 span{display:block;color:var(--mute);font-size:.4em;letter-spacing:-.02em;margin-top:.3em}
+.shoot-head p{font-size:var(--t-lead);line-height:1.38;letter-spacing:-.012em;max-width:40ch}
+.shoot-head .spec+p{margin-top:20px}
+.shoot-head p.stat{margin-top:16px;font-size:var(--t-meta);color:var(--mute)}
+.shoot .links{margin-top:14px;font-size:14px}
+.post{justify-self:end;width:min(100%,300px)}
+.post div{aspect-ratio:946/1270;max-width:100%;overflow:hidden;border-radius:10px;background:var(--wash);box-shadow:0 0 0 1px var(--soft)}
+.post img{width:100%;height:100%;object-fit:cover}
+.lens figure{overflow:hidden;background:var(--wash)}
+.lens .post{overflow:visible;background:none}
+.lens figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.lens-cols figure:hover img,.car-grid figure:hover img,.car-pair figure:hover img{transform:scale(1.04)}
+.lens-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1vw,14px);margin-top:clamp(40px,5vw,72px);align-items:start}
+.lens-cols>div{display:grid;gap:clamp(8px,1vw,14px);min-width:0}
+.lens-cols>div:nth-child(2){margin-top:clamp(40px,7vw,120px)}
+.lens-cols figure,.car-grid figure{aspect-ratio:2/3;max-width:100%}
+.grow{margin-top:clamp(36px,4.5vw,64px);aspect-ratio:3/2;max-height:92svh;width:100%}
+.car-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1vw,14px);margin-top:clamp(8px,1vw,14px);align-items:start}
+.car-grid figure:nth-child(even){margin-top:clamp(28px,5vw,80px)}
+.car-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1vw,14px);margin-top:clamp(8px,1vw,14px)}
+.car-pair figure{aspect-ratio:3/2;max-width:100%}
+.lens-more{position:relative;display:grid;place-items:center;margin-top:clamp(56px,6vw,100px);aspect-ratio:21/9;min-height:300px;max-width:100%;overflow:hidden;text-decoration:none;color:#fff;background:var(--wash)}
+.lens-more img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover}
+.lens-more::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.38);transition:background .5s}
+.lens-more:hover::after{background:rgba(0,0,0,.2)}
+.lm-in{position:relative;z-index:1;display:grid;gap:12px;text-align:center;padding:16px}
+.lm-in .mono{color:rgba(255,255,255,.82)}
+.lm-in strong{font:400 clamp(30px,5vw,84px)/1 var(--f-sans);letter-spacing:-.045em;overflow-wrap:anywhere}
+
 /* ---------- contact ring ---------- */
-.contact{margin-top:clamp(110px,13vw,210px);background:var(--wash);padding:clamp(80px,10vw,150px) var(--g) 0;overflow:clip;text-align:center}
+.contact{margin-top:0;background:var(--wash);padding:clamp(80px,10vw,150px) var(--g) 0;overflow:clip;text-align:center}
 .contact h2{font-size:clamp(46px,7.4vw,124px);line-height:.92;letter-spacing:-.05em}
 .contact p{margin:20px auto 0;max-width:40ch;font-size:var(--t-lead);line-height:1.35}
 .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:26px}
@@ -257,10 +297,10 @@ h1,h2,h3{font-weight:400;text-wrap:balance}
 /* Thai setting: looser leading so vowel and tone marks clear, no negative tracking */
 html[lang="th"] body{line-height:1.6}
 html[lang="th"] .hero-sub{line-height:1.2;letter-spacing:-.01em}
-html[lang="th"] .sec-head h2,html[lang="th"] .contact h2,html[lang="th"] .proj h3{line-height:1.18;letter-spacing:-.015em}
+html[lang="th"] .sec-head h2,html[lang="th"] .contact h2,html[lang="th"] .proj h3,html[lang="th"] .shoot h3{line-height:1.18;letter-spacing:-.015em}
 html[lang="th"] .row .t{line-height:1.32;letter-spacing:-.015em}
-html[lang="th"] .card h3,html[lang="th"] .org,html[lang="th"] .gig h3,html[lang="th"] .credit strong,html[lang="th"] .type-in strong{letter-spacing:-.01em;line-height:1.3}
-html[lang="th"] .lead,html[lang="th"] .aside{line-height:1.7;letter-spacing:0}
+html[lang="th"] .card h3,html[lang="th"] .org,html[lang="th"] .gig h3,html[lang="th"] .credit strong,html[lang="th"] .type-in strong,html[lang="th"] .lm-in strong{letter-spacing:-.01em;line-height:1.3}
+html[lang="th"] .lead,html[lang="th"] .aside,html[lang="th"] .shoot-head p{line-height:1.7;letter-spacing:0}
 html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[lang="th"] .row .c,html[lang="th"] .row .f,html[lang="th"] .hero-meta a,html[lang="th"] .credit .mono{letter-spacing:0;text-transform:none}
 
 /* ---------- responsive ---------- */
@@ -273,6 +313,14 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
   .gig .g2{grid-column:auto}
   .floor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .floor-grid figure:last-child{grid-column:span 2;aspect-ratio:4/3}
+  .shoot-head{grid-template-columns:minmax(0,1fr)}
+  .post{justify-self:start;width:min(100%,260px)}
+  .lens-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .lens-cols>div{display:contents}
+  .lens-cols>div:nth-child(2){margin-top:0}
+  .car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .car-pair{grid-template-columns:minmax(0,1fr)}
+  .lens-more{aspect-ratio:4/3}
 }
 @media (max-width:760px){
   .nav .hide-s{display:none}
@@ -337,15 +385,19 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
       <figure><img src="img/t-set-2.jpg" width="480" height="720" alt="" loading="lazy"></figure>
       <figure><img src="img/t-barbie-1.jpg" width="480" height="639" alt="" loading="lazy"></figure>
       <figure><img src="img/t-face-3.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-breaker-3.jpg" width="480" height="720" alt="" loading="lazy"></figure>
       <figure><img src="img/t-event-gcircuit2.jpg" width="480" height="639" alt="" loading="lazy"></figure>
       <figure><img src="img/t-acai-b.jpg" width="480" height="520" alt="" loading="lazy"></figure>
       <figure><img src="img/t-set-1.jpg" width="480" height="720" alt="" loading="lazy"></figure>
       <figure><img src="img/t-face-2.jpg" width="480" height="720" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-car-7.jpg" width="480" height="720" alt="" loading="lazy"></figure>
       <figure><img src="img/t-yamaha-a.jpg" width="480" height="599" alt="" loading="lazy"></figure>
       <figure><img src="img/t-event-mmf.jpg" width="480" height="639" alt="" loading="lazy"></figure>
       <figure><img src="img/t-face-4.jpg" width="480" height="738" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-friends.jpg" width="480" height="720" alt="" loading="lazy"></figure>
       <figure><img src="img/t-realme-b.jpg" width="480" height="599" alt="" loading="lazy"></figure>
       <figure><img src="img/t-toyota-a.jpg" width="480" height="599" alt="" loading="lazy"></figure>
+      <figure><img src="img/t-breaker-6.jpg" width="480" height="720" alt="" loading="lazy"></figure>
     </div>
   </section>
 
@@ -357,11 +409,11 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
     </div>
     <div class="two">
       <div>
-        <p class="aside" data-t="about-aside">Commercial talent and event crew, trained in the business side of film.</p>
+        <p class="aside" data-t="about-aside">Commercial talent, event crew and photographer, trained in the business side of film.</p>
         <figure class="portrait"><img src="img/profile.jpg" width="678" height="678" alt="Portrait of Suphakorn in a navy suit and tie" loading="lazy"></figure>
       </div>
       <div>
-        <p class="lead" data-t="about-1">I work in front of the camera and behind it. Since 2023 I've appeared in commercials and campaign stills for Coca-Cola, Toyota, Samsung, realme, Yamaha and other brands.</p>
+        <p class="lead" data-t="about-1">I work in front of the camera and behind it. Since 2023 I've appeared in commercials and campaign stills for Coca-Cola, Toyota, Samsung, realme, Yamaha and other brands. I also shoot photos, including a sneaker campaign for Breaker.</p>
         <p class="lead" data-t="about-2">As a marketing and distribution intern at Warner Bros. Discovery, I worked on the Thai launches of <em>Barbie</em> and <em>Meg 2: The Trench</em>. On my thesis film, <em>The White Rabbit</em>, I ran locations from permits to budget, and the film went on to play in cinemas.</p>
         <p class="lead" data-t="about-3">I'm at my best when people, schedules and details all have to come together at once.</p>
         <a class="btn" href="#work" data-t="about-btn">See the work ↓</a>
@@ -384,7 +436,7 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
   <section class="sec" id="work">
     <div class="index-head">
       <span class="tag" data-t="idx-tag">Selected work</span>
-      <span class="mono mute" data-t="idx-count">13 projects · 2023–2026</span>
+      <span class="mono mute" data-t="idx-count">15 projects · 2023–2026</span>
     </div>
     <ul class="rows">
       <li><a class="row" href="#p-toyota" data-img="img/toyota-a.jpg"><span class="c" data-t="c-cam">On camera</span><span class="t">Toyota</span><span class="f" data-t="f-tvc">TVC + stills</span></a></li>
@@ -400,6 +452,8 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
       <li><a class="row" href="#white-rabbit" data-img="img/thesis-crew.jpg"><span class="c" data-t="c-thesis">Thesis film</span><span class="t">The White Rabbit</span><span class="f" data-t="f-loc">Locations</span></a></li>
       <li><a class="row" href="#p-gcircuit" data-img="img/event-gcircuit.jpg"><span class="c" data-t="c-event">Event crew</span><span class="t">GCircuit Songkran</span><span class="f" data-t="f-vvip">VVIP guests</span></a></li>
       <li><a class="row" href="#p-mmf" data-img="img/event-mmf.jpg"><span class="c" data-t="c-event">Event crew</span><span class="t">MMF 2023</span><span class="f" data-t="f-booth">Drinks booth</span></a></li>
+      <li><a class="row" href="#p-breaker" data-img="img/breaker-4.jpg"><span class="c" data-t="c-photo">Photography</span><span class="t">Breaker ISUS × JAII</span><span class="f" data-t="f-campaign">Campaign photos</span></a></li>
+      <li><a class="row" href="#p-carmeet" data-img="img/car-7.jpg"><span class="c" data-t="c-photo">Photography</span><span class="t">Car meeting</span><span class="f" data-t="f-eventph">Event photos</span></a></li>
     </ul>
   </section>
 
@@ -584,6 +638,82 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
     </div>
   </section>
 
+  <!-- BEHIND THE LENS -->
+  <section class="lens bleed" id="photography">
+    <div class="sec-head">
+      <span class="tag" data-t="lens-tag">Photographer · Ricoh GR III</span>
+      <h2 data-t="lens-h">Behind the lens</h2>
+    </div>
+    <div class="lens-intro">
+      <p class="lead" data-t="lens-intro">I shoot too, on a Ricoh GR III. Here is a sneaker campaign I shot for a brand, and a night photographing a car meet.</p>
+      <a class="ulink" href="https://www.instagram.com/nostalgiaheisenberg/" target="_blank" rel="noopener">Instagram @nostalgiaheisenberg ↗</a>
+    </div>
+
+    <article class="shoot" id="p-breaker">
+      <div class="shoot-head">
+        <div>
+          <h3 data-t="h-breaker">Breaker ISUS × JAII <span>Sneaker campaign</span></h3>
+          <dl class="spec">
+            <div><dt data-t="d-client">Client</dt><dd>Breaker Sneaker</dd></div>
+            <div><dt data-t="d-released">Released</dt><dd data-t="d-breaker-date">5 Feb 2025</dd></div>
+            <div><dt data-t="d-role">My role</dt><dd data-t="d-breaker-role">Photographer</dd></div>
+          </dl>
+          <p data-t="p-breaker">I was the photographer for ISUS × JAII, Breaker's collaboration with Jaii of the band Taitosmith on its classic ISUS sneaker. I shot the pairs on their own and on foot, outdoors from late afternoon into the night, and Breaker used the photos to launch the collection on its Facebook page.</p>
+          <p class="mono stat" data-t="breaker-stat">Launch post · 4K reactions · 125 shares</p>
+          <div class="links"><a class="ulink" href="https://www.facebook.com/share/1EkZ1TBmLZ/" target="_blank" rel="noopener" data-t="l-breaker">See the launch post on Facebook ↗</a></div>
+        </div>
+        <figure class="post">
+          <div><img src="img/breaker-post.jpg" width="946" height="1270" alt="Breaker Sneaker's Facebook post from 5 February 2025 launching the ISUS × JAII collection" loading="lazy"></div>
+          <figcaption class="fig-cap mono" data-t="cap-post">As posted by Breaker Sneaker</figcaption>
+        </figure>
+      </div>
+      <div class="lens-cols">
+        <div>
+          <figure><img src="img/breaker-3.jpg" width="1000" height="1500" alt="Three ISUS × JAII sneakers hanging by their laces against a cloudy sky" loading="lazy"></figure>
+          <figure><img src="img/breaker-5.jpg" width="1000" height="1500" alt="A hand tying the laces of a white ISUS × JAII sneaker on dry leaves" loading="lazy"></figure>
+        </div>
+        <div>
+          <figure><img src="img/breaker-1.jpg" width="1000" height="1500" alt="A model holding a pair of black ISUS × JAII sneakers against an evening sky, plaid cloth blowing behind" loading="lazy"></figure>
+          <figure><img src="img/breaker-6.jpg" width="1000" height="1500" alt="A black sneaker kicked up over a city crosswalk at night, lights streaking behind" loading="lazy"></figure>
+        </div>
+        <div>
+          <figure><img src="img/breaker-2.jpg" width="1000" height="1500" alt="Black ISUS × JAII sneakers hanging from a railing at sunset" loading="lazy"></figure>
+          <figure><img src="img/breaker-4.jpg" width="1000" height="1500" alt="Close-up of a pair of black ISUS × JAII sneakers with a signature on the toe caps" loading="lazy"></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="shoot" id="p-carmeet">
+      <div class="shoot-head">
+        <div>
+          <h3 data-t="h-car">Car meeting <span>Event atmosphere</span></h3>
+          <dl class="spec">
+            <div><dt data-t="d-date">Date</dt><dd data-t="d-car-date">March 2024</dd></div>
+            <div><dt data-t="d-type">Type</dt><dd data-t="d-car-type">Personal project</dd></div>
+            <div><dt data-t="d-camera">Camera</dt><dd>Ricoh GR III</dd></div>
+          </dl>
+        </div>
+        <p data-t="p-car">Not a paid job. I went to a car meet on my own to photograph the atmosphere: the cars, the details under the hood and inside the cabin, and the people gathered around them.</p>
+      </div>
+      <figure class="grow"><img src="img/car-4.jpg" width="2000" height="1333" alt="The rear of an orange sports car parked in a dark car park" loading="lazy"></figure>
+      <div class="car-grid">
+        <figure><img src="img/car-7.jpg" width="1000" height="1500" alt="A red race car with the number 15 on its nose under car park lights" loading="lazy"></figure>
+        <figure><img src="img/car-6.jpg" width="1000" height="1500" alt="A flame shooting from a car as a crowd watches in a car park" loading="lazy"></figure>
+        <figure><img src="img/car-2.jpg" width="1000" height="1500" alt="A tuned engine bay with orange and purple parts, seen through a wide lens" loading="lazy"></figure>
+        <figure><img src="img/car-5.jpg" width="1000" height="1500" alt="A race helmet on the seat of a stripped-out cabin with an orange roll cage" loading="lazy"></figure>
+      </div>
+      <div class="car-pair">
+        <figure><img src="img/car-1.jpg" width="1600" height="1067" alt="Two white race-livery cars on display under a Toyo Tires sign at night" loading="lazy"></figure>
+        <figure><img src="img/car-3.jpg" width="1600" height="1067" alt="Close-up of the headlight of a pale green car with a signature on the bonnet" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <a class="lens-more" href="https://www.instagram.com/nostalgiaheisenberg/" target="_blank" rel="noopener">
+      <img src="img/lens-dawn.jpg" width="2000" height="1333" alt="" loading="lazy">
+      <span class="lm-in"><span class="mono" data-t="lens-more">More of my photos on Instagram</span><strong>@nostalgiaheisenberg ↗</strong></span>
+    </a>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact bleed" id="contact">
     <span class="tag" data-t="nav-contact">Contact</span>
@@ -605,7 +735,7 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
   <div class="foot-cols">
     <div><h4 data-t="ft-menu">Menu</h4><ul><li><a href="#work" data-t="nav-work">Work</a></li><li><a href="#about" data-t="nav-about">About</a></li><li><a href="#contact" data-t="nav-contact">Contact</a></li></ul></div>
     <div><h4 data-t="nav-contact">Contact</h4><ul><li class="mono">suphakornyanprasong@gmail.com</li><li class="mono">091 539 4959</li><li><a href="https://www.instagram.com/returnuturn/" target="_blank" rel="noopener">Instagram ↗</a></li></ul></div>
-    <div><h4 data-t="ft-work">What I do</h4><ul><li data-t="ft-w1">Commercial talent</li><li data-t="c-event">Event crew</li><li data-t="ft-w3">Film marketing</li></ul></div>
+    <div><h4 data-t="ft-work">What I do</h4><ul><li data-t="ft-w1">Commercial talent</li><li data-t="c-event">Event crew</li><li data-t="ft-w3">Film marketing</li><li data-t="ft-w4">Photography</li></ul></div>
     <div><h4 data-t="ft-based">Based in</h4><ul><li data-t="ft-bkk">Bangkok, Thailand</li><li class="mute" data-t="ft-langs">Thai · English</li></ul></div>
   </div>
   <div class="legal"><span>© 2026 Suphakorn Yanprasong</span><a href="#top" data-t="ft-top">Back to top ↑</a></div>
@@ -742,7 +872,7 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
 
   /* 3D ring */
   const ring = document.getElementById('ring');
-  const ringImgs = ['toyota-a','samsung-a','face-1','realme-a','barbie-1','yamaha-a','set-2','rasa-a','event-gcircuit2','acai-a','face-3','huachiew-a','meg-2','event-mmf','toyota-b','face-2','realme-b','barbie-2','samsung-b','set-1','yamaha-b','event-gcircuit','face-4','rasa-b'];
+  const ringImgs = ['toyota-a','samsung-a','face-1','realme-a','barbie-1','yamaha-a','set-2','rasa-a','event-gcircuit2','acai-a','face-3','huachiew-a','meg-2','event-mmf','toyota-b','face-2','realme-b','barbie-2','samsung-b','set-1','yamaha-b','event-gcircuit','face-4','rasa-b','breaker-4','car-7','breaker-1','car-6','friends','car-2'];
   ringImgs.forEach(n => {
     const f = document.createElement('figure');
     const im = document.createElement('img');
@@ -808,6 +938,24 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
       scrollTrigger: { trigger: '.film-img', start: 'top bottom', end: 'bottom top', scrub: true }
     });
 
+    /* behind the lens: the dark panel opens to full width, the hero car shot widens as it arrives */
+    gsap.fromTo('.lens', { clipPath: 'inset(0% 4% 0% 4% round 22px)' }, {
+      clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none',
+      scrollTrigger: { trigger: '.lens', start: 'top bottom', end: 'top 20%', scrub: true }
+    });
+    gsap.fromTo('.grow', { clipPath: 'inset(0% 16% 0% 16% round 10px)' }, {
+      clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none',
+      scrollTrigger: { trigger: '.grow', start: 'top 92%', end: 'center 55%', scrub: true }
+    });
+    gsap.fromTo('.grow img', { scale: 1.18 }, {
+      scale: 1, ease: 'none',
+      scrollTrigger: { trigger: '.grow', start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+    gsap.fromTo('.lens-more img', { yPercent: -6 }, {
+      yPercent: 6, ease: 'none',
+      scrollTrigger: { trigger: '.lens-more', start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+
     gsap.from('#giant', {
       yPercent: 45, ease: 'none',
       scrollTrigger: { trigger: '.foot', start: 'top bottom', end: 'bottom bottom', scrub: true }
@@ -828,10 +976,27 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
         }
       });
       camST = tw.scrollTrigger;
+      /* photo columns drift at different speeds (wide screens only; phones get a plain grid) */
+      gsap.utils.toArray('.lens-cols > div').forEach((c, i) => gsap.fromTo(c, { yPercent: i === 1 ? 8 : 0 }, {
+        yPercent: i === 1 ? -8 : -3, ease: 'none',
+        scrollTrigger: { trigger: '.lens-cols', start: 'top bottom', end: 'bottom top', scrub: true }
+      }));
+      gsap.utils.toArray('.car-grid figure').forEach((f, i) => gsap.fromTo(f, { yPercent: i % 2 ? 6 : 0 }, {
+        yPercent: i % 2 ? -6 : 0, ease: 'none',
+        scrollTrigger: { trigger: '.car-grid', start: 'top bottom', end: 'bottom top', scrub: true }
+      }));
       return () => { camST = null; rail.classList.remove('pinned'); hintMode = 'swipe'; hint.textContent = ui('swipe'); railProgress(); };
     });
 
     addEventListener('load', () => ScrollTrigger.refresh());
+  }
+
+  /* header goes dark while it sits over the photography section */
+  if (hasG) {
+    ScrollTrigger.create({
+      trigger: '.lens', start: () => 'top ' + headerH(), end: () => 'bottom ' + headerH(),
+      toggleClass: { targets: header, className: 'on-dark' }, invalidateOnRefresh: true
+    });
   }
 
   /* language: English by default, Thai on request (remembered per viewer; #th in the link opens Thai) */
@@ -846,8 +1011,8 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
     'hero-tag':'ผลงานคัดสรร 2566–2569',
     'hero-cap':'ภาพยนตร์แบรนด์ · นักแสดงนำ',
     'about-h':'สวัสดีครับ ผมรีเทิร์น',
-    'about-aside':'นักแสดงโฆษณาและทีมงานอีเวนต์ ที่เรียนจบด้านธุรกิจภาพยนตร์',
-    'about-1':'ผมทำงานทั้งหน้ากล้องและหลังกล้อง ตั้งแต่ปี 2566 ผมร่วมงานโฆษณาและภาพนิ่งกับแบรนด์อย่าง Coca-Cola, Toyota, Samsung, realme, Yamaha และอีกหลายแบรนด์',
+    'about-aside':'นักแสดงโฆษณา ทีมงานอีเวนต์ และช่างภาพ ที่เรียนจบด้านธุรกิจภาพยนตร์',
+    'about-1':'ผมทำงานทั้งหน้ากล้องและหลังกล้อง ตั้งแต่ปี 2566 ผมร่วมงานโฆษณาและภาพนิ่งกับแบรนด์อย่าง Coca-Cola, Toyota, Samsung, realme, Yamaha และอีกหลายแบรนด์ นอกจากนี้ผมยังถ่ายภาพ รวมถึงภาพแคมเปญรองเท้าให้แบรนด์ Breaker',
     'about-2':'ช่วงฝึกงานฝ่ายการตลาดและการจัดจำหน่ายที่ Warner Bros. Discovery ผมได้ร่วมงานเปิดตัวภาพยนตร์ <em>Barbie</em> และ <em>Meg 2: The Trench</em> ในไทย ส่วนหนังธีสิสเรื่อง <em>The White Rabbit</em> ผมดูแลโลเคชั่นตั้งแต่การขออนุญาตไปจนถึงงบประมาณ และหนังได้เข้าฉายในโรงภาพยนตร์',
     'about-3':'ผมทำงานได้ดีที่สุดเมื่อต้องทำให้คน ตารางเวลา และรายละเอียดทุกอย่างลงตัวไปพร้อมกัน',
     'about-btn':'ดูผลงาน ↓',
@@ -856,8 +1021,8 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
     'f-tools':'โปรแกรม','f-tools-d':'PowerPoint, Word, Excel (พื้นฐาน), Photoshop, Illustrator, ตัดต่อวิดีโอ',
     'f-str':'จุดแข็ง','f-str-d':'สื่อสารกับคน ประสานงานหลายทีมพร้อมกัน งานขออนุญาตและเอกสาร งบประมาณ',
     'n-1':'ลูกค้างานหน้ากล้อง','n-2':'ภาพยนตร์ฟอร์มใหญ่ที่ Warner Bros. Discovery','n-3':'ภาพยนตร์ที่ได้เข้าฉายในโรง',
-    'idx-tag':'ผลงานคัดสรร','idx-count':'13 ผลงาน · 2566–2569',
-    'c-cam':'งานหน้ากล้อง','c-thesis':'หนังธีสิส','c-event':'ทีมงานอีเวนต์',
+    'idx-tag':'ผลงานคัดสรร','idx-count':'15 ผลงาน · 2566–2569',
+    'c-cam':'งานหน้ากล้อง','c-thesis':'หนังธีสิส','c-event':'ทีมงานอีเวนต์','c-photo':'ถ่ายภาพ','f-campaign':'ภาพแคมเปญ','f-eventph':'ภาพบรรยากาศงาน',
     'f-tvc':'TVC + ภาพนิ่ง','f-billboard':'บิลบอร์ดนานาชาติ','f-brandfilm':'ภาพยนตร์แบรนด์','f-stills':'ภาพนิ่ง','f-launch':'งานเปิดตัว','f-promo':'ถ่ายโปรโมต','f-loc':'โลเคชั่น','f-vvip':'ดูแลแขก VVIP','f-booth':'บูธเครื่องดื่ม',
     't-hcu':'หัวเฉียวเฉลิมพระเกียรติ',
     'cam-tag':'ฟรีแลนซ์ · นักแสดงและนายแบบ','cam-h':'งานหน้ากล้อง',
@@ -906,10 +1071,21 @@ html[lang="th"] .mono,html[lang="th"] .facts dt,html[lang="th"] .spec dt,html[la
     'gc-p':'ผมดูแลแขก VVIP ตลอดงาน ตอนที่ระบบชำระเงินขัดข้อง ผมนำของที่แขกชาวต่างชาติสั่งไปให้ก่อน ขอโทษ แล้วกลับมาเก็บเงินเมื่อทีมแก้ระบบเสร็จ',
     'mmf-role':'ทีมงาน · บูธเครื่องดื่ม est Cola',
     'mmf-p':'ผมประจำบูธเครื่องดื่ม est Cola ขายและเสิร์ฟเครื่องดื่มให้ผู้มาร่วมงาน',
+    'lens-tag':'ช่างภาพ · Ricoh GR III','lens-h':'งานถ่ายภาพ',
+    'lens-intro':'นอกจากงานหน้ากล้อง ผมก็ถ่ายภาพด้วย ใช้กล้อง Ricoh GR III ด้านล่างคืองานถ่ายแคมเปญรองเท้าให้แบรนด์ และภาพบรรยากาศจากงาน car meeting',
+    'h-breaker':'Breaker ISUS × JAII <span>แคมเปญรองเท้าสนีกเกอร์</span>',
+    'd-client':'ลูกค้า','d-released':'เปิดตัว','d-breaker-date':'5 ก.พ. 2568','d-breaker-role':'ช่างภาพ',
+    'p-breaker':'ผมเป็นช่างภาพให้คอลเลกชัน ISUS × JAII ที่ Breaker คอลแลปกับจ๋าย วงไททศมิตร บนรองเท้ารุ่นคลาสสิก ISUS ผมถ่ายทั้งภาพตัวรองเท้าและภาพตอนสวมใส่ กลางแจ้งตั้งแต่ช่วงเย็นจนถึงกลางคืน และ Breaker ใช้ภาพชุดนี้เปิดตัวคอลเลกชันบนเพจ Facebook',
+    'breaker-stat':'โพสต์เปิดตัว · 4K รีแอ็กชัน · แชร์ 125 ครั้ง',
+    'l-breaker':'ดูโพสต์เปิดตัวบน Facebook ↗','cap-post':'โพสต์จากเพจ Breaker Sneaker',
+    'h-car':'Car meeting <span>ภาพบรรยากาศในงาน</span>',
+    'd-date':'ช่วงเวลา','d-car-date':'มี.ค. 2567','d-type':'ประเภท','d-car-type':'งานส่วนตัว','d-camera':'กล้อง',
+    'p-car':'งานนี้ไม่ใช่งานจ้าง ผมไปถ่ายเองเพื่อเก็บบรรยากาศในงาน car meeting ทั้งตัวรถ รายละเอียดในห้องเครื่องและในห้องโดยสาร ไปจนถึงผู้คนที่มารวมตัวกันรอบๆ',
+    'lens-more':'ดูภาพอื่นๆ ของผมได้บน Instagram',
     'ct-h':'มาร่วมงาน<br>กันครับ',
     'ct-p':'พร้อมรับงานประจำและงานฟรีแลนซ์ในกรุงเทพฯ',
     'ct-mail':'ส่งอีเมล',
-    'ft-menu':'เมนู','ft-work':'งานที่ทำ','ft-w1':'นักแสดงโฆษณา','ft-w3':'การตลาดภาพยนตร์','ft-based':'ประจำที่','ft-bkk':'กรุงเทพฯ ประเทศไทย','ft-langs':'ไทย · อังกฤษ','ft-top':'กลับขึ้นด้านบน ↑'
+    'ft-menu':'เมนู','ft-work':'งานที่ทำ','ft-w1':'นักแสดงโฆษณา','ft-w3':'การตลาดภาพยนตร์','ft-w4':'ถ่ายภาพ','ft-based':'ประจำที่','ft-bkk':'กรุงเทพฯ ประเทศไทย','ft-langs':'ไทย · อังกฤษ','ft-top':'กลับขึ้นด้านบน ↑'
   };
   const tNodes = [...document.querySelectorAll('[data-t]')];
   tNodes.forEach(n => { n.dataset.en = n.innerHTML; });
